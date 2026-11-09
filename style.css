@@ -1,0 +1,164 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b5b5a8;
+}
+
+/* CALCULATOR */
+.calculator {
+    width: 340px;
+    padding: 20px;
+    background: #d3d3c7;
+    border: 3px solid #77776e;
+    border-radius: 12px;
+    box-shadow:
+        6px 6px 0 #77776e,
+        10px 10px 20px rgba(0,0,0,0.3);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.status {
+    font-size: 10px;
+    color: #39743b;
+    font-weight: bold;
+}
+
+/* DISPLAY */
+.display {
+    background: #a8b89a;
+    border: 4px solid #555b4e;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+#history {
+    color: #53604b;
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+#result {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #263b24;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* BUTTON GRID */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+/* ALL BUTTONS */
+button {
+    height: 58px;
+    border: 2px solid #77776e;
+    border-radius: 5px;
+    background: #e5e5dc;
+    color: #222;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #88887d;
+    transition: 0.1s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background: #f5f5ed;
+}
+
+/* BUTTON ACTIVE */
+button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* NUMBER */
+.number {
+    background: #eeeeE5;
+}
+
+/* OPERATOR */
+.operator {
+    background: #b5b5a9;
+    color: #222;
+}
+
+/* CLEAR */
+.clear {
+    background: #bd7770;
+    color: white;
+}
+
+/* DELETE */
+.delete {
+    background: #c99b65;
+    color: white;
+}
+
+/* EQUAL */
+.equal {
+    background: #657e55;
+    color: white;
+}
+
+/* ZERO BUTTON */
+.zero {
+    grid-column: span 2;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #99998e;
+    color: #55554c;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
